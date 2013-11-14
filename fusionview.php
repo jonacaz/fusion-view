@@ -42,7 +42,7 @@ function fusionview_short_code($attributes, $body)
       <div id='ward' class='subpanel'></div>
 
       <div id='tab-content' class='tab-group'>
-        <div class='selected'>table</div>
+        <div>table</div>
         <div>map</div>
       </div> 
       
@@ -52,14 +52,14 @@ function fusionview_short_code($attributes, $body)
     &nbsp;
     
     <div id='map-wrapper'>
-      <div id="map-canvas"></div>
+      <div id="map-canvas" style='text-align:center; font-style:italic;'>Click on 'table' or 'map' tab</div>
     </div>
     
 
     <div id='latlong'></div>
     <div id='table-wrapper'>
       <h1 id="ft-title"></h1>
-      <h4 id="ft-query"></h4>
+      <div id="ft-query"></div>
       <div id="ft-data"></div>
     </div>
     <p id='edit-link'></p>

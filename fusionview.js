@@ -97,7 +97,10 @@ fusionTable.attachSelectBox = function(options, id, initialValue)
   {     
     var html = "" ;
     for (var i = 0 ; i < options.length ; i++)
-      html += "<option value='" + options[i] + "'>" + options[i] + "</option>" ;
+    {
+      var selected = options[i] == initialValue ? "selected" : "" ;
+      html += "<option value='" + options[i] + "' " + selected + ">" + options[i] + "</option>" ;
+    }
     html = "<select>" + html + "</select>" ;
 
     len = jQuery("#" + id);
@@ -149,7 +152,7 @@ fusionTable.draw = function(where) {
       }
       var numCols = response.getDataTable().getNumberOfColumns();
 
-      document.getElementById('ft-query').innerHTML = 'WHERE ' + where ;
+      document.getElementById('ft-query').innerHTML = 'WHERE ' + where + '&nbsp;&nbsp;(' + numRows + ' rows)';
       document.getElementById('ft-title').innerHTML = "Filtered ICAG Wish List";
 
 
